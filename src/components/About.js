@@ -5,9 +5,9 @@ import Links from "./Links";
 
 function About(props) {
 
-  const bioTrue=props.bio;
-  const size=((props.bio).length)
-  if((bioTrue)&&size>1){
+  // const bioTrue=props.bio;
+  // const size=((props.bio).length)
+  // if((bioTrue)&&size>1){
 
 
     
@@ -15,7 +15,7 @@ function About(props) {
       <div id="about">
       <h2>About Me</h2>
    
-      <p>{props.bio}</p>
+     {props.bio && props.bio.length>0?<p>{props.bio}</p>:null}
      
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
       
@@ -23,9 +23,7 @@ function About(props) {
     </div>
   );
 }
-return (
- null
-);
-}
+
+
 
 export default About;
